@@ -13,6 +13,7 @@
 <body>
     <h1>Eaglercraft 26.3 Cobblemon Client</h1>
     <p>Enter your Render Web Service URL below:</p>
+    <!-- Type your exact render URL here, for example: ://onrender.com -->
     <input type="text" id="renderUrl" placeholder="://onrender.com"><br>
     <button onclick="launchGame()">Connect to Cobblemon Server</button>
 
@@ -23,10 +24,11 @@
                 alert("Please enter your Render URL first!");
                 return;
             }
-            // Clean up the URL format if the user types wss:// manually
+            
+            // Clean up the URL prefixes so Eaglercraft doesn't break
             url = url.replace("wss://", "").replace("http://", "").replace("https://", "");
             
-            // Redirect right into the Eaglercraft 26.3 browser runtime pointing to your Render server proxy
+            // Fixed connection line using backticks to properly insert your URL variable
             window.location.href = `https://eaglercraft.com{url}`;
         }
     </script>

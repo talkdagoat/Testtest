@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <h1>Eaglercraft 26.3 Cobblemon Client</h1>
+    <h1>Eaglercraft 26.3 Cobblemon Client v1.0 goat</h1>
     <p>Enter your Render Web Service URL below:</p>
     <!-- Type your exact render URL here, for example: ://onrender.com -->
     <input type="text" id="renderUrl" placeholder="://onrender.com"><br>
@@ -29,7 +29,7 @@
             url = url.replace("wss://", "").replace("http://", "").replace("https://", "");
             
             // Fixed connection line using backticks to properly insert your URL variable
-            window.location.href = `https://eaglercraft.com{url}`;
+            window.location.href = `https://eaglercraft.com${url}`;
         }
     </script>
 </body>
